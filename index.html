@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindWell - Mental Health Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">SuperMental</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="login-btn">Log In</button>
+                    <button class="signup-btn">Sign Up</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="container">
+                <h1>Your Mental Health Matters</h1>
+                <p>Join our community of experts and individuals committed to improving mental well-being. Take the first step towards a healthier mind today.</p>
+                <a href="https://omareldieb.github.io/myForm/" class="cta-button">Test yourself</a>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="doctors-carousel">
+                    <button class="arrow left-arrow" aria-label="Previous doctor">&lt;</button>
+                    <div class="doctors-container">
+                        <article class="doctor">
+                            <img src="images/images/WhatsApp Image 2024-07-29 at 04.45.28.jpeg" alt="Doctor 1">
+                            <h3>Dr. John Doe</h3>
+                            <p>Psychiatrist</p>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </article>
+                        <article class="doctor">
+                            <img src="images/images/WhatsApp Image 2024-07-29 at 04.45.32.jpeg" alt="Doctor 2">
+                            <h3>Dr. Marc Smith</h3>
+                            <p>Psychologist</p>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </article>
+                        <article class="doctor">
+                            <img src="images/images/WhatsApp Image 2024-07-29 at 04.45.36.jpeg" alt="Doctor 3">
+                            <h3>Dr. Mike Johnson</h3>
+                            <p>Therapist</p>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </article>
+                        <article class="doctor">
+                            <img src="images/images/WhatsApp Image 2024-07-29 at 04.45.41.jpeg" alt="Doctor 4">
+                            <h3>Dr. Mohamed Khaled</h3>
+                            <p>Counselor</p>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </article>
+                        <article class="doctor">
+                            <img src="images/images/WhatsApp Image 2024-07-29 at 04.46.42.jpeg" alt="Doctor 5">
+                            <h3>Dr. Tom Brown</h3>
+                            <p>Psychiatrist</p>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </article>
+                        <article class="doctor">
+                            <img src="images/images/salem.jpeg" alt="Doctor 6">
+                            <h3>Dr. Oliver Davis</h3>
+                            <p>Psychologist</p>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </article>
+                        <article class="doctor">
+                            <img src="images/images/Sami.jpeg" alt="Doctor 7">
+                            <h3>Dr. Alex Wilson</h3>
+                            <p>Therapist</p>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </article>
+                    </div>
+                    <button class="arrow right-arrow" aria-label="Next doctor">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team">
+            <div class="container">
+                <h2>Meet Our Expert Team</h2>
+                <div class="team-members">
+                    <article class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Zyad Khaled">
+                        <h3>Zyad Khaled</h3>
+                        <p>Data Scientist</p>
+                    </article>
+                    <article class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Amoaz Amr">
+                        <h3>moaz Amr</h3>
+                        <p>Cybersecurity Specialist</p>
+                    </article>
+                    <article class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Omar Eldeib">
+                        <h3>Omar Eldeib</h3>
+                        <p>Web Developer</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required aria-label="Email">
+                <input type="password" placeholder="Password" required aria-label="Password">
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+    </section>
+</main>
+    <script>
+// Get the login button and the login box
+const loginBtn = document.querySelector('.login-btn');
+const loginBox = document.getElementById('loginModal');
+
+// Add an event listener to the login button
+loginBtn.addEventListener('click', function() {
+  // Show the login box
+  loginBox.style.display = 'block';
+});
+
+// Add an event listener to the close button
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', function() {
+  // Hide the login box
+  loginBox.style.display = 'none';
+});
+
+// Add an event listener to the window
+window.addEventListener('click', function(event) {
+  // If the user clicks outside the login box, hide it
+  if (event.target === loginBox) {
+    loginBox.style.display = 'none';
+  }
+});
+
+        document.getElementById('loginForm').onsubmit = function(e) {
+            e.preventDefault();
+            // Here you would typically send the login data to a server
+            alert('Login functionality would be implemented here.');
+            modal.style.display = "none";
+        }
+
+        const doctorsContainer = document.querySelector('.doctors-container');
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+
+        leftArrow.addEventListener('click', () => {
+            doctorsContainer.scrollBy({left: -220, behavior: 'smooth'});
+        });
+
+        rightArrow.addEventListener('click', () => {
+            doctorsContainer.scrollBy({left: 220, behavior: 'smooth'});
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.services, .team');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                if (rect.top <= windowHeight * 0.75) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+    <section id="contact-us">
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder=" " required>
+                    <label for="phone">Your Phone</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contact-form');
+            const formElements = contactForm.elements;
+            
+            for (let i = 0; i < formElements.length; i++) {
+                formElements[i].classList.add('animate-fadeInUp');
+                formElements[i].style.animationDelay = `${i * 0.1}s`;
+            }
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Here you would typically send the form data to a server
+                alert('Form submitted successfully!');
+                contactForm.reset();
+            });
+        });
+    </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "NmrqqYaRfKPt0UtyoHRrd",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="NmrqqYaRfKPt0UtyoHRrd"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+    <script src="main.js"></script>
+</body>
+</html>
